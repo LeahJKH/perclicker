@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="./css/cookieStyles.css" />
+  </head>
+  <body>
+    <header>
+      <button onclick="clearCache()">clear</button>
+      <button onclick="indev()">options</button>
+      <button onclick="forPer()">credits</button>
+      <button onclick="bugrepo()">Bugs</button>
+    </header>
+    <div id="moneyBar">
+      <h2>$</h2>
+      <h2 id="money-el">0</h2>
+    </div>
+    <img src="./pictures/per.jpg" id="increment-btn" onclick="increment()" />
+
+    <aside>
+      <div class="upgrade" id="buy1" onclick="buyup(1)">
+        HTML +1 click POW <span class="buy1M">10$</span>
+      </div>
+      <div class="upgrade" id="buy2" onclick="buyUp(2)">
+        CSS +2 click POW <span class="buy2M">25$</span>
+      </div>
+      <div class="upgrade" id="buy3" onclick="buyUp(3)">
+        javascript +3 click POW <span class="buy3M"> 50$</span>
+      </div>
+      <div class="upgrade" id="buy4" onclick="buyUp(4)">
+        Encouragement +4 click POW '<span class="buy4M"> 75$</span>
+      </div>
+      <div class="upgrade" id="buy5" onclick="buyUp(5)">
+        "i hope it went well" +5 click POW <span class="buy5M"> 100$</span>
+      </div>
+      <div class="upgrade" id="buy6" onclick="buyUp(6)">
+        <img src="./pictures/nick.jpg" id="nick" /> best friend nick +6 click POW
+        <span class="buy6M"> 1000$</span>
+      </div>
+    </aside>
+
+    <script src="./Js/app.js"></script>
+  </body>
+</html>

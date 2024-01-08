@@ -1,0 +1,144 @@
+body {
+  background-color: hsl(54, 28%, 65%);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 80px 1.5fr 1fr;
+}
+header {
+  grid-column-start: span 2;
+  background-color: hsl(222, 75%, 71%);
+  border-bottom: 4px solid hsl(251, 21%, 46%);
+}
+header > button {
+  background-color: hsl(222, 75%, 71%);
+  width: 140px;
+  height: 20px;
+  border-bottom: none;
+}
+
+/*MAIN GAME*/
+#increment-btn {
+  grid-column-start: 2;
+  grid-row-start: 2;
+  justify-self: center;
+  align-self: center;
+  width: 200px;
+  height: 200px;
+  transition: all 0.2s;
+}
+#increment-btn:active {
+  width: 150px;
+  height: 150px;
+}
+#moneyBar {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  align-self: center;
+  background-color: hsl(221, 85%, 84%);
+  border: 2px solid hsl(252, 34%, 66%);
+  margin: 0 20px;
+  padding: 5px;
+  display: flex;
+}
+/*MAIN GAME*/
+
+/*UPGRADE BAR*/
+.upgrade {
+  background-color: hsl(221, 85%, 84%);
+  border: 2px solid hsl(252, 22%, 47%);
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+}
+
+aside {
+  background-color: hsl(221, 85%, 84%);
+  border-left: 4px solid hsl(252, 22%, 47%);
+  grid-column-start: 3;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+#nick {
+  height: 50px;
+  width: 50px;
+}
+/*UPGRADE BAR*/
+
+/*
+work in progress
+*/
+.buy1M {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+.buy1:hover .buy1M {
+  visibility: visible;
+}
+.buy2M {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+.buy2:hover .buy2M {
+  visibility: visible;
+}
+.buy3M {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+.buy3:hover .buy3M {
+  visibility: visible;
+}
+.buy4M {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+.buy4:hover .buy4M {
+  visibility: visible;
+}
+.buy5M {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+.buy5:hover .buy5M {
+  visibility: visible;
+}
+.buy6M {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+}
+.buy6:hover .buy6M {
+  visibility: visible;
+}
+/*
+work in progress
+*/
