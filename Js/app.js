@@ -13,9 +13,15 @@ let user = {
   upgraded: 1,
   password: "",
 };
+if (!Number(localStorage.getItem("multiplier"))) {
+  localStorage.setItem("multiplier", user.upgraded);
+  localStorage.setItem("cash", user.money);
+}else {
+  startgame();
+}
 
-startgame();
-localStorage.setItem("multiplier", user.upgraded);
+
+
 localStorage.setItem("cash", user.money);
 function startgame() {
   user.upgraded = Number(localStorage.getItem("multiplier"));
