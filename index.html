@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link
@@ -5,6 +6,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
     <link rel="stylesheet" href="./css/cookieStyles.css" />
+    <title>Per Clicker</title>
   </head>
   <body>
     <header>
@@ -19,25 +21,36 @@
     </div>
     <img src="./pictures/per.jpg" id="increment-btn" onclick="increment()" />
 
-    <aside>
+    <aside id="buyMenu">
       <div class="upgrade" id="buy1" onclick="buyUp(1)">
+        <p>
         HTML +1 click POW <span class="buy1M">10$</span>
+      </p>
       </div>
       <div class="upgrade" id="buy2" onclick="buyUp(2)">
+        <p>
         CSS +2 click POW <span class="buy2M">25$</span>
+      </p>
       </div>
       <div class="upgrade" id="buy3" onclick="buyUp(3)">
+        <p>
         javascript +3 click POW <span class="buy3M"> 50$</span>
+      </p>
       </div>
       <div class="upgrade" id="buy4" onclick="buyUp(4)">
-        Encouragement +4 click POW '<span class="buy4M"> 75$</span>
+        <p>
+        Encouragement +4 click POW <span class="buy4M"> 75$</span>
+      </p>
       </div>
       <div class="upgrade" id="buy5" onclick="buyUp(5)">
+        <p>
         "i hope it went well" +5 click POW <span class="buy5M"> 100$</span>
+      </p>
       </div>
       <div class="upgrade" id="buy6" onclick="buyUp(6)">
-        <img src="./pictures/nick.jpg" id="nick" /> best friend nick +6 click POW
+        <img src="./pictures/nick.jpg" id="nick" /> <p>best friend nick +6 click POW
         <span class="buy6M"> 1000$</span>
+      </p>
       </div>
     </aside>
 
