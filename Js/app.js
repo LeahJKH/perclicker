@@ -20,9 +20,8 @@ if (!Number(localStorage.getItem("multiplier"))) {
   startgame();
 }
 
-
-
 localStorage.setItem("cash", user.money);
+
 function startgame() {
   user.upgraded = Number(localStorage.getItem("multiplier"));
   user.money = Number(localStorage.getItem("cash"));
@@ -38,9 +37,12 @@ function increment() {
 }
 
 function buyUp(num) {
+  if (num = 4) {
+    audio.play()
+  }
   if (user.money >= num * 10) {
-    user.upgraded += num;
-    user.money = user.money - num * 10;
+    user.upgraded += user.upgraded + num;
+    user.money = user.money - (num * 10);
     localStorage.setItem("multiplier", user.upgraded);
     localStorage.setItem("cash", user.money);
     startgame();
