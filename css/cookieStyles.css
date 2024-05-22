@@ -1,11 +1,11 @@
 body {
   background-color: hsl(54, 28%, 65%);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80px 1.5fr 1fr;
+display: flex;
+flex-direction: column;
 }
 header {
-  grid-column-start: span 2;
+  width: 100vw;
+  height:100px;
   background-color: hsl(222, 75%, 71%);
   border-bottom: 4px solid hsl(251, 21%, 46%);
 }
@@ -14,6 +14,10 @@ header > button {
   width: 140px;
   height: 20px;
   border-bottom: none;
+}
+main {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*MAIN GAME*/
@@ -54,9 +58,7 @@ header > button {
 aside {
   background-color: hsl(221, 85%, 84%);
   border-left: 4px solid hsl(252, 22%, 47%);
-  grid-column-start: 3;
-  grid-row-start: 1;
-  grid-row-end: 4;
+
 }
 #nick {
   height: 50px;
@@ -68,81 +70,3 @@ aside {
 }
 /*UPGRADE BAR*/
 
-/*
-work in progress
-*/
-.buy1M {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-}
-.buy1:hover .buy1M {
-  visibility: visible;
-}
-.buy2M {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-}
-.buy2:hover .buy2M {
-  visibility: visible;
-}
-.buy3M {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-}
-.buy3:hover .buy3M {
-  visibility: visible;
-}
-.buy4M {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-}
-.buy4:hover .buy4M {
-  visibility: visible;
-}
-.buy5M {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-}
-.buy5:hover .buy5M {
-  visibility: visible;
-}
-.buy6M {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-}
-.buy6:hover .buy6M {
-  visibility: visible;
-}
-/*
-work in progress
-*/

@@ -7,53 +7,65 @@
     />
     <link rel="stylesheet" href="./css/cookieStyles.css" />
     <title>Per Clicker</title>
+    <script src="./Js/app.js" defer></script>
   </head>
   <body>
+    
     <header>
       <button onclick="clearCache()">clear</button>
       <button onclick="indev()">options</button>
       <button onclick="forPer()">credits</button>
       <button onclick="bugrepo()">Bugs</button>
     </header>
-    <div id="moneyBar">
-      <h2>$</h2>
-      <h2 id="money-el">0</h2>
-    </div>
-    <img src="./pictures/per.jpg" id="increment-btn" onclick="increment()" />
 
-    <aside id="buyMenu">
-      <div class="upgrade" id="buy1" onclick="buyUp(1)">
-        <p>
-        HTML +1 click POW <span class="buy1M">10$</span>
-      </p>
-      </div>
-      <div class="upgrade" id="buy2" onclick="buyUp(2)">
-        <p>
-        CSS +2 click POW <span class="buy2M">25$</span>
-      </p>
-      </div>
-      <div class="upgrade" id="buy3" onclick="buyUp(3)">
-        <p>
-        javascript +3 click POW <span class="buy3M"> 50$</span>
-      </p>
-      </div>
-      <div class="upgrade" id="buy4" onclick="buyUp(4)">
-        <p>
-        Encouragement +4 click POW <span class="buy4M"> 75$</span>
-      </p>
-      </div>
-      <div class="upgrade" id="buy5" onclick="buyUp(5)">
-        <p>
-        "i hope it went well" +5 click POW <span class="buy5M"> 100$</span>
-      </p>
-      </div>
-      <div class="upgrade" id="buy6" onclick="buyUp(6)">
-        <img src="./pictures/nick.jpg" id="nick" /> <p>best friend nick +6 click POW
-        <span class="buy6M"> 1000$</span>
-      </p>
-      </div>
-    </aside>
+    <main>
 
-    <script src="./Js/app.js"></script>
-  </body>
-</html>
+      <aside id="moneyBar">
+        <h2>$</h2>
+        <h2 id="money-el">0</h2>
+      </aside>
+
+      <section>
+        <img src="./pictures/per.jpg" id="increment-btn" onclick="increment()" />
+      </section>
+      
+      <aside id="buyMenu">
+
+        <div class="upgrade" id="buy1" onclick="buyUp(1)">
+          <p>HTML +1 click POW</p> 
+          <p>10$</p>
+        </div>
+
+        <div class="upgrade" id="buy2" onclick="buyUp(2)">
+          <p>CSS +2 click POW</p>  
+          <p>25$</p>
+        </div>
+
+        <div class="upgrade" id="buy3" onclick="buyUp(3)">
+          <p>javascript +3 click POW</p>  
+          <p>50$</p>
+        </div>
+
+        <div class="upgrade" id="buy4" onclick="buyUp(4)">
+          <p>Encouragement +4 click POW</p>  
+          <p>75$</p>
+        </div>
+
+        <div class="upgrade" id="buy5" onclick="buyUp(5)">
+          <p>"i hope it went well" +5 click POW</p> 
+          <p>100$</p>
+        </div>
+
+        <div class="upgrade" id="buy6" onclick="buyUp(6)">
+          <img src="./pictures/nick.jpg" id="nick" /> 
+          <p>best friend nick +6 click POW</p>  
+          <p>1000$</p>
+        </div>
+
+      </aside>
+      
+    
+    </main>
+    </body>
+    </html>
+    
