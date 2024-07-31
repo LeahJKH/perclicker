@@ -2,6 +2,9 @@ let moneyEl = document.getElementById("money-el");
 const audio = new Audio("./audio/encourage.mp3");
 const transBg = document.querySelector("#trans-bg")
 const overMenu = document.querySelector("#over-Menu")
+const closeMenu = document.querySelector("#close")
+const items = document.querySelector("#items")
+const HeadTxt = document.querySelector("#headTxt")
 
 let user = {
   name: "",
@@ -52,23 +55,37 @@ function clearCache() {
   location.reload();
   resetNum();
 }
+
+closeMenu.addEventListener("click", () => {
+  transBg.style.display = "none"
+  items.innerHTML = ``
+})
 function resetNum() {
   localStorage.getItem("multiplier", user.upgraded);
 }
 
 function bugrepo() {
-  alert("if you wanna report a bug u deffo have me on discord.");
+  HeadTxt.textContent = "bug report"
+  transBg.style.display = "flex";
+  const p = document.createElement("p")
+  const Stxt = document.createTextNode("if you wanna report a bug u deffo have me on discord.")
+  p.append(Stxt)
+  items.append(p)
 }
 
 function forPer() {
-  alert(
-    "this project was made because of my love for Per and his amazing abilites."
-  );
+  HeadTxt.textContent = "message for per"
+  transBg.style.display = "flex";
+  const p = document.createElement("p")
+  const Stxt = document.createTextNode("this project was made because of my love for Per and his amazing abilites.")
+  p.append(Stxt)
+  items.append(p)
 }
 function inDev() {
+  HeadTxt.textContent = "Settings"
   transBg.style.display = "flex";
   const h1 = document.createElement("h1")
   const Stxt = document.createTextNode("Settings")
   h1.append(Stxt)
-  overMenu.append(h1)
+  items.append(h1)
 }

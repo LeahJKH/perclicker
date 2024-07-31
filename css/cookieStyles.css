@@ -86,4 +86,23 @@ aside {
   background-color: hsl(221, 85%, 84%);
   border: 6px hsl(222, 75%, 71%) solid;
   border-radius: 20px;
+  padding: 20px;
+}
+#close {
+  color: hsl(7, 69%, 41%);
+  cursor: pointer;
+  
+}
+
+.menu-pos {
+  justify-content: space-between;
+  align-items: center;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column ;
 }
