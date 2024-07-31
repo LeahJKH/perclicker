@@ -1,11 +1,7 @@
-let buyOne = document.getElementById("buy1");
-let buyTwo = document.getElementById("buy2");
-let buyThree = document.getElementById("buy3");
-let buyFour = document.getElementById("buy4");
-let buyFive = document.getElementById("buy5");
-let buySix = document.getElementById("buy6");
 let moneyEl = document.getElementById("money-el");
 const audio = new Audio("./audio/encourage.mp3");
+const transBg = document.querySelector("#trans-bg")
+const overMenu = document.querySelector("#over-Menu")
 
 let user = {
   name: "",
@@ -70,5 +66,9 @@ function forPer() {
   );
 }
 function inDev() {
-  alert("this isn't done");
+  transBg.style.display = "flex";
+  const h1 = document.createElement("h1")
+  const Stxt = document.createTextNode("Settings")
+  h1.append(Stxt)
+  overMenu.append(h1)
 }

@@ -10,32 +10,36 @@
     <script src="./Js/app.js" defer></script>
   </head>
   <body>
-    
-    <header>
-      <button onclick="clearCache()">clear</button>
-      <button onclick="indev()">options</button>
-      <button onclick="forPer()">credits</button>
-      <button onclick="bugrepo()">Bugs</button>
-    </header>
+    <div id="trans-bg">
+      <div id="over-Menu">
 
-    <main>
-
-      <aside id="moneyBar">
-        <h2>$</h2>
-        <h2 id="money-el">0</h2>
+      </div>
+    </div>
+      <header>
+        <button onclick="clearCache()">clear</button>
+        <button onclick="inDev()">options</button>
+        <button onclick="forPer()">credits</button>
+        <button onclick="bugrepo()">Bugs</button>
+      </header>
+      
+      <main>
+        
+        <aside id="moneyBar">
+          <h2>$</h2>
+          <h2 id="money-el">0</h2>
       </aside>
-
+      
       <section>
         <img src="./pictures/per.jpg" id="increment-btn" onclick="increment()" />
       </section>
       
       <aside id="buyMenu">
-
+        
         <div class="upgrade" id="buy1" onclick="buyUp(1)">
           <p>HTML +1 click POW</p> 
           <p>10$</p>
         </div>
-
+        
         <div class="upgrade" id="buy2" onclick="buyUp(2)">
           <p>CSS +2 click POW</p>  
           <p>25$</p>
