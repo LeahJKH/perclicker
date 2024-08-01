@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
     <link rel="stylesheet" href="./css/cookieStyles.css" />
     <title>Per Clicker</title>
-    
     <script  src="./Js/app.js" defer></script>
   </head>
+
   <body>
+    <!--⇩ This is for the over menu ⇩-->
     <div id="trans-bg">
       <div id="over-Menu">
         <div class="row menu-pos">
@@ -23,60 +21,61 @@
         </div>
       </div>
     </div>
-      <header>
+    <!--⇧ This is for the over menu ⇧-->
+
+    <!--⇩ this holds the top menu and its items ⇩-->
+    <header>
         <button onclick="clearCache()">clear</button>
         <button onclick="inDev()">options</button>
         <button onclick="forPer()">credits</button>
         <button onclick="bugrepo()">Bugs</button>
-      </header>
-    
-      <main>
-        
+    </header>
+    <!--⇧ this holds the top menu and its items ⇧-->
+
+    <main>
         <aside id="moneyBar">
           <h2>$</h2>
           <h2 id="money-el">0</h2>
-      </aside>
+        </aside>
       
-      <section>
-        <img src="./pictures/per.jpg" id="increment-btn" onclick="increment()" />
-      </section>
+        <section>
+          <img src="./pictures/per.jpg" id="increment-btn" onclick="increment()" />
+        </section>
       
-      <aside id="buyMenu">
-        
-        <div class="upgrade" id="buy1" onclick="buyUp(1)">
-          <p>HTML +1 click POW</p> 
-          <p>10$</p>
-        </div>
-        
-        <div class="upgrade" id="buy2" onclick="buyUp(2)">
-          <p>CSS +2 click POW</p>  
-          <p>25$</p>
-        </div>
+        <aside id="buyMenu">
+          <!--⇩ this holds all the diffrent upgrades ⇩-->
+          <div class="upgrade" id="buy1" onclick="buyUp(1)">
+            <p>HTML +1 click POW</p> 
+            <p>10$</p>
+          </div>
+          
+          <div class="upgrade" id="buy2" onclick="buyUp(2)">
+            <p>CSS +2 click POW</p>  
+            <p>25$</p>
+          </div>
 
-        <div class="upgrade" id="buy3" onclick="buyUp(3)">
-          <p>javascript +3 click POW</p>  
-          <p>50$</p>
-        </div>
+          <div class="upgrade" id="buy3" onclick="buyUp(3)">
+            <p>javascript +3 click POW</p>  
+            <p>50$</p>
+          </div>
 
-        <div class="upgrade" id="buy4" onclick="buyUp(4)">
-          <p>Encouragement +4 click POW</p>  
-          <p>75$</p>
-        </div>
+          <div class="upgrade" id="buy4" onclick="buyUp(4)">
+            <p>Encouragement +4 click POW</p>  
+            <p>75$</p>
+          </div>
 
-        <div class="upgrade" id="buy5" onclick="buyUp(5)">
-          <p>"i hope it went well" +5 click POW</p> 
-          <p>100$</p>
-        </div>
+          <div class="upgrade" id="buy5" onclick="buyUp(5)">
+            <p>"i hope it went well" +5 click POW</p> 
+            <p>100$</p>
+          </div>
 
-        <div class="upgrade" id="buy6" onclick="buyUp(6)">
-          <img src="./pictures/nick.jpg" id="nick" /> 
-          <p>best friend nick +6 click POW</p>  
-          <p>1000$</p>
-        </div>
-
-      </aside>
-      
-    
+          <div class="upgrade" id="buy6" onclick="buyUp(6)">
+            <img src="./pictures/nick.jpg" id="nick" /> 
+            <p>best friend nick +6 click POW</p>  
+            <p>1000$</p>
+          </div>
+          <!--⇧ this holds all the diffrent upgrades ⇧-->
+        </aside> 
     </main>
     </body>
     </html>
