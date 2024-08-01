@@ -19,6 +19,8 @@ if (!Number(localStorage.getItem("multiplier"))) {
   startgame();
 }
 
+let AudioSwitch = true
+
 localStorage.setItem("cash", user.money);
 
 function startgame() {
@@ -37,7 +39,11 @@ function increment() {
 
 function buyUp(num) {
   if (num = 4) {
-    audio.play()
+    if(AudioSwitch === true) {
+      audio.play()
+    } else {
+      return
+    }
   }
   if (user.money >= num * 10) {
     user.upgraded += user.upgraded + num;
@@ -86,6 +92,23 @@ function inDev() {
   transBg.style.display = "flex";
   const h1 = document.createElement("h1")
   const Stxt = document.createTextNode("Settings")
+  const audioCheck = document.createElement("input")
+  audioCheck.type = "checkbox"
+  audioCheck.name = "audioOnOff"
+  if (AudioSwitch === true) {
+    audioCheck.checked = "true"
+  } else {
+   
+  }
+  const audioLabel = document.createElement("label")
+  audioLabel.for = "audioOnOff"
+  const ALTxt = document.createTextNode("Audio")
+  audioLabel.append(ALTxt)
   h1.append(Stxt)
   items.append(h1)
+  items.append(audioCheck)
+  items.append(audioLabel)
+  audioCheck.addEventListener("click", () => {
+    AudioSwitch = !AudioSwitch
+  })
 }
