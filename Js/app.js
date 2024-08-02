@@ -1,26 +1,56 @@
-const ObjP = {
-  moneyEl: document.querySelector("#money-el"),
-  audio: new Audio("./audio/encourage.mp3"),
-  transBg: document.querySelector("#trans-bg"),
-  overMenu: document.querySelector("#over-Menu"),
-  closeMenu: document.querySelector("#close"),
-  items: document.querySelector("#items"),
-  HeadTxt: document.querySelector("#headTxt")
-}
+import { ObjP } from "./module.js";
+import { optionCreater } from "./options.js";
+import { AudioSwitch } from "./options.js";
+
 let user = {
   name: "",
   money: 0,
   upgraded: 1,
   password: "",
 };
+
 if (!Number(localStorage.getItem("multiplier"))) {
   localStorage.setItem("multiplier", user.upgraded);
   localStorage.setItem("cash", user.money);
-}else {
+} else {
   startgame();
 }
 
-let AudioSwitch = true
+ObjP.headerItems.innerHTML = `
+<button id="clearCacheBtn">clear</button>
+<button id="inDevBtn">options</button>
+<button id="forPerBtn">credits</button>
+<button id="bugRepoBtn">Bugs</button>`;
+
+ObjP.imgCont.innerHTML = `<img src="./pictures/per.jpg" id="increment-btn" />`;
+
+ObjP.buyMenu.innerHTML = `
+<div class="upgrade" id="buy1">
+  <p>HTML +1 click POW</p> 
+  <p>10$</p>
+</div>
+<div class="upgrade" id="buy2">
+  <p>CSS +2 click POW</p>  
+  <p>25$</p>
+</div>
+<div class="upgrade" id="buy3">
+  <p>javascript +3 click POW</p>  
+  <p>50$</p>
+</div>
+<div class="upgrade" id="buy4">
+  <p>Encouragement +4 click POW</p>  
+  <p>75$</p>
+</div>
+<div class="upgrade" id="buy5">
+  <p>"i hope it went well" +5 click POW</p> 
+  <p>100$</p>
+</div>
+<div class="upgrade" id="buy6">
+  <img src="./pictures/nick.jpg" id="nick" /> 
+  <p>best friend nick +6 click POW</p>  
+  <p>1000$</p>
+</div>
+`;
 
 localStorage.setItem("cash", user.money);
 
@@ -39,16 +69,17 @@ function increment() {
 }
 
 function buyUp(num) {
-  if (num = 4) {
-    if(AudioSwitch === true) {
-      ObjP.audio.play()
+  if (num === 4) {
+    if (AudioSwitch === true) {
+      ObjP.audio.play();
     } else {
-      return
+      return;
     }
   }
-  if (user.money >= num * 10) {
-    user.upgraded += user.upgraded + num;
-    user.money = user.money - (num * 10);
+  const cost = num * 10;
+  if (user.money >= cost) {
+    user.upgraded += num;
+    user.money -= cost;
     localStorage.setItem("multiplier", user.upgraded);
     localStorage.setItem("cash", user.money);
     startgame();
@@ -56,60 +87,55 @@ function buyUp(num) {
     alert("you are poor");
   }
 }
+
 function clearCache() {
   localStorage.setItem("multiplier", 1);
   localStorage.setItem("cash", 0);
   location.reload();
-  resetNum();
 }
 
-closeMenu.addEventListener("click", () => {
-  ObjP.transBg.style.display = "none"
-  ObjP.items.innerHTML = ``
-})
 function resetNum() {
-  localStorage.getItem("multiplier", user.upgraded);
+  localStorage.setItem("multiplier", 1);
 }
 
 function bugrepo() {
-  ObjP.HeadTxt.textContent = "bug report"
+  ObjP.HeadTxt.textContent = "bug report";
   ObjP.transBg.style.display = "flex";
-  const p = document.createElement("p")
-  const Stxt = document.createTextNode("if you wanna report a bug u deffo have me on discord.")
-  p.append(Stxt)
-  ObjP.items.append(p)
+  const p = document.createElement("p");
+  const Stxt = document.createTextNode("if you wanna report a bug u deffo have me on discord.");
+  p.append(Stxt);
+  ObjP.items.append(p);
 }
 
 function forPer() {
-  ObjP.HeadTxt.textContent = "message for per"
+  ObjP.HeadTxt.textContent = "message for per";
   ObjP.transBg.style.display = "flex";
-  const p = document.createElement("p")
-  const Stxt = document.createTextNode("this project was made because of my love for Per and his amazing abilites.")
-  p.append(Stxt)
-  ObjP.items.append(p)
+  const p = document.createElement("p");
+  const Stxt = document.createTextNode("this project was made because of my love for Per and his amazing abilites.");
+  p.append(Stxt);
+  ObjP.items.append(p);
 }
+
 function inDev() {
-  ObjP.HeadTxt.textContent = "Settings"
-  ObjP.transBg.style.display = "flex";
-  const h1 = document.createElement("h1")
-  const Stxt = document.createTextNode("Settings")
-  const audioCheck = document.createElement("input")
-  audioCheck.type = "checkbox"
-  audioCheck.name = "audioOnOff"
-  if (AudioSwitch === true) {
-    audioCheck.checked = "true"
-  } else {
-   
-  }
-  const audioLabel = document.createElement("label")
-  audioLabel.for = "audioOnOff"
-  const ALTxt = document.createTextNode("Audio")
-  audioLabel.append(ALTxt)
-  h1.append(Stxt)
-  ObjP.items.append(h1)
-  ObjP.items.append(audioCheck)
-  ObjP.items.append(audioLabel)
-  audioCheck.addEventListener("click", () => {
-    AudioSwitch = !AudioSwitch
-  })
+  optionCreater();
 }
+
+// Add event listeners to the buttons
+document.getElementById("clearCacheBtn").addEventListener("click", clearCache);
+document.getElementById("inDevBtn").addEventListener("click", inDev);
+document.getElementById("forPerBtn").addEventListener("click", forPer);
+document.getElementById("bugRepoBtn").addEventListener("click", bugrepo);
+document.getElementById("increment-btn").addEventListener("click", increment);
+
+// Add event listeners for the upgrade items
+document.getElementById("buy1").addEventListener("click", () => buyUp(1));
+document.getElementById("buy2").addEventListener("click", () => buyUp(2));
+document.getElementById("buy3").addEventListener("click", () => buyUp(3));
+document.getElementById("buy4").addEventListener("click", () => buyUp(4));
+document.getElementById("buy5").addEventListener("click", () => buyUp(5));
+document.getElementById("buy6").addEventListener("click", () => buyUp(6));
+
+ObjP.closeMenu.addEventListener("click", () => {
+  ObjP.transBg.style.display = "none";
+  ObjP.items.innerHTML = ``;
+});
