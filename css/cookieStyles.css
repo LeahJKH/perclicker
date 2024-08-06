@@ -44,16 +44,25 @@ main {
 }
 
 #moneyBar {
-  grid-column-start: 1;
-  grid-row-start: 2;
-  align-self: center;
-  background-color: hsl(221, 85%, 84%);
-  border: 2px solid hsl(252, 34%, 66%);
+  background: rgb(110,123,146);
+  background: linear-gradient(180deg, rgba(110,123,146,1) 0%, rgba(80,91,110,1) 4%, rgba(60,70,86,1) 10%, rgba(55,65,80,1) 23%, rgba(34,42,55,1) 50%);
+  border: 3px solid #3E4858;
   margin: 0 20px;
   padding: 5px;
-  display: flex;
+  min-width: 385px;
+  min-height: 69px;
+  border-radius: 20px;
+  color: #6696CD;
+  font-size: 30px;
+  align-items: center;
 }
-
+#cash-sign {
+  margin-right: 5px;
+}
+#moneyBar > h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 #header-Items {
   margin-right: 20px;
   display: flex;
