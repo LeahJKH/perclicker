@@ -3,12 +3,13 @@ background: rgb(22,33,43);
 background: linear-gradient(180deg, rgba(22,33,43,0.7) 2%, rgba(22, 26, 29, 0.925) 100%);
 display: flex;
 flex-direction: column;
+overflow: hidden;
 }
 header {
   width: 100vw;
-  height:100px;
-  background-color: hsl(222, 75%, 71%);
-  border-bottom: 4px solid hsl(251, 21%, 46%);
+  min-height:100px;
+  background: rgb(22,27,33);
+  background: linear-gradient(322deg, rgba(22,27,33,1) 0%, rgba(21,34,46,1) 100%);
 }
 
 main {
@@ -17,6 +18,12 @@ main {
 }
 
 /*MAIN GAME*/
+#cut-out {
+  background: rgb(34,42,55);
+background: linear-gradient(0deg, rgba(34,42,55,1) 28%, rgba(110,123,146,1) 100%);
+width: 25%;
+height: 100px;
+}
 #increment-btn {
   grid-column-start: 2;
   grid-row-start: 2;
@@ -40,6 +47,12 @@ main {
   padding: 5px;
   display: flex;
 }
+#header-Items {
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
 .btn-Style {
   background-color: #2D3A52;
   border-radius: 10px;
@@ -61,18 +74,18 @@ main {
 
 }
 
-aside {
-  background-color: hsl(221, 85%, 84%);
-  border-left: 4px solid hsl(252, 22%, 47%);
 
-}
 #nick {
   height: 50px;
   width: 50px;
 }
-#buyMenu {
+#buy-menu {
   height: 100vh;
-  overflow: auto;
+  width: 26%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: rgb(22,27,33);
+  background: linear-gradient(27deg, rgba(22,27,33,1) 0%, rgba(21,34,46,1) 100%);
 }
 /*UPGRADE BAR*/
 
@@ -99,7 +112,10 @@ aside {
   cursor: pointer;
   
 }
-
+#header-overHead {
+  justify-content: space-between;
+  align-items: center;
+}
 .menu-pos {
   justify-content: space-between;
   align-items: center;
