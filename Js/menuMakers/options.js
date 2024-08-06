@@ -1,5 +1,5 @@
-import { ObjP } from "./module.js";
-import { startgame, user } from "./app.js";
+import { ObjP } from "../module.js";
+import { startgame, user } from "../app.js";
 
 export let AudioSwitch = true;
 

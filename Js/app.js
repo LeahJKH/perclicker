@@ -1,6 +1,7 @@
 import { ObjP } from "./module.js";
-import { optionCreater } from "./options.js";
-import { AudioSwitch } from "./options.js";
+import { optionCreater, AudioSwitch  } from "./menuMakers/options.js";
+import { bugReport } from "./menuMakers/bugReport.js";
+import { credits } from "./menuMakers/credits.js";
 
 export let user = {
   name: "",
@@ -95,24 +96,14 @@ function clearCache() {
 }
 
 
+function forPer() {
+  credits()
+}
 
 function bugrepo() {
-  ObjP.HeadTxt.textContent = "bug report";
-  ObjP.transBg.style.display = "flex";
-  const p = document.createElement("p");
-  const Stxt = document.createTextNode("if you wanna report a bug u deffo have me on discord.");
-  p.append(Stxt);
-  ObjP.items.append(p);
+  bugReport()
 }
 
-function forPer() {
-  ObjP.HeadTxt.textContent = "message for per";
-  ObjP.transBg.style.display = "flex";
-  const p = document.createElement("p");
-  const Stxt = document.createTextNode("this project was made because of my love for Per and his amazing abilites.");
-  p.append(Stxt);
-  ObjP.items.append(p);
-}
 
 function inDev() {
   optionCreater();
