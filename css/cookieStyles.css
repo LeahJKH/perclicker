@@ -28,6 +28,8 @@ main {
   background: linear-gradient(0deg, rgba(34,42,55,1) 28%, rgba(110,123,146,1) 100%);
   width: 25%;
   height: 100px;
+  text-align: center;
+  color: #6696CD;
 }
 
 #increment-btn {
