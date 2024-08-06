@@ -89,10 +89,12 @@ main {
   background: linear-gradient(0deg, rgba(32,40,52,1) 0%, rgba(32,35,42,0.4) 100%);
   border: 1px solid #2D3A52;
   border-radius: 10px;
-  text-align: center;
+  text-align: left;
   padding: 5px;
   width: 85%;
   height: 50%;
+  color: #6696CD;
+
 }
 
 #nick {
@@ -137,10 +139,12 @@ main {
 #over-Menu {
   width: 80%;
   height: 80%;
-  background-color: hsl(221, 85%, 84%);
-  border: 6px hsl(222, 75%, 71%) solid;
+  background: rgb(32,40,52);
+  background: linear-gradient(0deg, rgba(32,40,52,1) 0%, rgba(32,35,42,1) 100%);
+  border: 6px solid #2D3A52;
   border-radius: 20px;
   padding: 20px;
+  color: #6696CD;
 }
 
 #close {
