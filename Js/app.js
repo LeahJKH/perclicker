@@ -2,7 +2,7 @@ import { ObjP } from "./module.js";
 import { optionCreater } from "./options.js";
 import { AudioSwitch } from "./options.js";
 
-let user = {
+export let user = {
   name: "",
   money: 0,
   upgraded: 1,
@@ -54,7 +54,7 @@ ObjP.buyMenu.innerHTML = `
 
 localStorage.setItem("cash", user.money);
 
-function startgame() {
+export function startgame() {
   user.upgraded = Number(localStorage.getItem("multiplier"));
   user.money = Number(localStorage.getItem("cash"));
   ObjP.moneyEl.textContent = user.money;
@@ -73,8 +73,8 @@ function buyUp(num) {
     if (AudioSwitch === true) {
       ObjP.audio.play();
     } else {
-      return;
-    }
+      
+        }
   }
   const cost = num * 10;
   if (user.money >= cost) {
@@ -94,9 +94,7 @@ function clearCache() {
   location.reload();
 }
 
-function resetNum() {
-  localStorage.setItem("multiplier", 1);
-}
+
 
 function bugrepo() {
   ObjP.HeadTxt.textContent = "bug report";
