@@ -1,5 +1,6 @@
 body {
-  background-color: hsl(54, 28%, 65%);
+background: rgb(22,33,43);
+background: linear-gradient(180deg, rgba(22,33,43,0.7) 2%, rgba(22, 26, 29, 0.925) 100%);
 display: flex;
 flex-direction: column;
 }
@@ -9,12 +10,7 @@ header {
   background-color: hsl(222, 75%, 71%);
   border-bottom: 4px solid hsl(251, 21%, 46%);
 }
-header > button {
-  background-color: hsl(222, 75%, 71%);
-  width: 140px;
-  height: 20px;
-  border-bottom: none;
-}
+
 main {
   display: flex;
   justify-content: space-between;
@@ -44,6 +40,15 @@ main {
   padding: 5px;
   display: flex;
 }
+.btn-Style {
+  background-color: #2D3A52;
+  border-radius: 10px;
+  border: none;
+  color: #6696CD;
+  width: 180px;
+  height: 53px;
+  font-size: 30px;
+}
 /*MAIN GAME*/
 
 /*UPGRADE BAR*/
@@ -53,6 +58,7 @@ main {
   text-align: center;
   margin: 5px;
   padding: 5px;
+
 }
 
 aside {
