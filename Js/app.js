@@ -17,10 +17,10 @@ if (!Number(localStorage.getItem("multiplier"))) {
 }
 
 ObjP.headerItems.innerHTML = `
-<button id="clearCacheBtn">clear</button>
-<button id="inDevBtn">options</button>
-<button id="forPerBtn">credits</button>
-<button id="bugRepoBtn">Bugs</button>`;
+<button id="clearCacheBtn" class="btn-Style">clear</button>
+<button id="inDevBtn" class="btn-Style">options</button>
+<button id="forPerBtn" class="btn-Style">credits</button>
+<button id="bugRepoBtn" class="btn-Style">Bugs</button>`;
 
 ObjP.imgCont.innerHTML = `<img src="./pictures/per.jpg" id="increment-btn" />`;
 
