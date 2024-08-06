@@ -165,3 +165,25 @@ main {
   display: flex;
   flex-direction: column;
 }
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #9f9e9e #464646;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 20px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #464646;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #9f9e9e;
+    border: 19px solid #ededed;
+  }
+  /* ===== Scrollbar CSS ===== */
