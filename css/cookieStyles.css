@@ -1,13 +1,15 @@
 body {
-background: rgb(22,33,43);
-background: linear-gradient(180deg, rgba(22,33,43,0.7) 2%, rgba(22, 26, 29, 0.925) 100%);
-display: flex;
-flex-direction: column;
-overflow: hidden;
+  background: rgb(22,33,43);
+  background: linear-gradient(180deg, rgba(22,33,43,0.7) 2%, rgba(22, 26, 29, 0.925) 100%);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh; /* Ensure body takes full height */
 }
+
 header {
   width: 100vw;
-  min-height:100px;
+  min-height: 100px;
   background: rgb(22,27,33);
   background: linear-gradient(322deg, rgba(22,27,33,1) 0%, rgba(21,34,46,1) 100%);
 }
@@ -15,28 +17,30 @@ header {
 main {
   display: flex;
   justify-content: space-between;
+  flex: 1; /* Allow main to take up remaining space */
+  overflow: hidden; /* Prevent overflow of main */
 }
 
 /*MAIN GAME*/
 #cut-out {
   background: rgb(34,42,55);
-background: linear-gradient(0deg, rgba(34,42,55,1) 28%, rgba(110,123,146,1) 100%);
-width: 25%;
-height: 100px;
+  background: linear-gradient(0deg, rgba(34,42,55,1) 28%, rgba(110,123,146,1) 100%);
+  width: 25%;
+  height: 100px;
 }
+
 #increment-btn {
-  grid-column-start: 2;
-  grid-row-start: 2;
-  justify-self: center;
-  align-self: center;
   width: 200px;
   height: 200px;
   transition: all 0.2s;
+  border-radius: 15px;
 }
+
 #increment-btn:active {
   width: 150px;
   height: 150px;
 }
+
 #moneyBar {
   grid-column-start: 1;
   grid-row-start: 2;
@@ -47,12 +51,14 @@ height: 100px;
   padding: 5px;
   display: flex;
 }
+
 #header-Items {
   margin-right: 20px;
   display: flex;
   justify-content: space-between;
   width: 70%;
 }
+
 .btn-Style {
   background-color: #2D3A52;
   border-radius: 10px;
@@ -66,29 +72,44 @@ height: 100px;
 
 /*UPGRADE BAR*/
 .upgrade {
-  background-color: hsl(221, 85%, 84%);
-  border: 2px solid hsl(252, 22%, 47%);
+  background: rgb(32,40,52);
+  background: linear-gradient(0deg, rgba(32,40,52,1) 0%, rgba(32,35,42,0.4) 100%);
+  border: 1px solid #2D3A52;
+  border-radius: 10px;
   text-align: center;
-  margin: 5px;
   padding: 5px;
-
+  width: 85%;
+  height: 50%;
 }
-
 
 #nick {
   height: 50px;
   width: 50px;
 }
-#buy-menu {
-  height: 100vh;
+
+#buy-menu-wrapper {
+
+  height: 100%;
   width: 26%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column;
   background: rgb(22,27,33);
   background: linear-gradient(27deg, rgba(22,27,33,1) 0%, rgba(21,34,46,1) 100%);
 }
-/*UPGRADE BAR*/
 
+#buy-menu {
+  padding: 20px 0 20px 0;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+ 
+}
+/*UPGRADE BAR*/
 
 #trans-bg {
   display: none;
@@ -99,6 +120,7 @@ height: 100px;
   justify-content: center;
   align-items: center;
 }
+
 #over-Menu {
   width: 80%;
   height: 80%;
@@ -107,24 +129,28 @@ height: 100px;
   border-radius: 20px;
   padding: 20px;
 }
+
 #close {
   color: hsl(7, 69%, 41%);
   cursor: pointer;
-  
 }
+
 #header-overHead {
   justify-content: space-between;
   align-items: center;
 }
+
 .menu-pos {
   justify-content: space-between;
   align-items: center;
 }
+
 .row {
   display: flex;
   flex-direction: row;
 }
+
 .column {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
 }
