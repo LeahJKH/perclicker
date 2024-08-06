@@ -23,7 +23,7 @@ ObjP.headerItems.innerHTML = `
 <button id="forPerBtn" class="btn-Style">credits</button>
 <button id="bugRepoBtn" class="btn-Style">Bugs</button>`;
 
-ObjP.imgCont.innerHTML = `<img src="./pictures/per.jpg" id="increment-btn" />`;
+ObjP.imgCont.innerHTML = `<img src="./pictures/per.webp" id="increment-btn" alt="beautifull picture of per smiling wearing a cap" />`;
 
 ObjP.buyMenu.innerHTML = `
 <div class="upgrade" id="buy1">
@@ -47,7 +47,7 @@ ObjP.buyMenu.innerHTML = `
   <p>100$</p>
 </div>
 <div class="upgrade" id="buy6">
-  <img src="./pictures/nick.jpg" id="nick" /> 
+  <img src="./pictures/nick.webp" id="nick" alt="picture of a guy named nick short hair smiling" /> 
   <p>best friend nick +6 click POW</p>  
   <p>1000$</p>
 </div>
