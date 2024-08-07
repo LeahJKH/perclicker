@@ -135,7 +135,16 @@ main {
   justify-content: center;
   align-items: center;
 }
-
+#break-Line-style {
+  width: 70%;
+  height: 2px;
+  border-radius: 20px;
+  background-color: rgba(225, 225, 255, 0.5);
+  position: absolute;
+  z-index: 35;
+  top: 16.8%;
+  right: 20px;
+}
 #over-Menu {
   width: 80%;
   height: 80%;
