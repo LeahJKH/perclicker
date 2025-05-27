@@ -17,41 +17,55 @@ if (!Number(localStorage.getItem("multiplier"))) {
   startgame();
 }
 
-ObjP.headerItems.innerHTML = `
-<button id="clearCacheBtn" class="btn-Style">clear</button>
-<button id="inDevBtn" class="btn-Style">options</button>
-<button id="forPerBtn" class="btn-Style">credits</button>
-<button id="bugRepoBtn" class="btn-Style">Bugs</button>`;
+const buttonsMenu = [
+  {
+    id: "clearCacheBtn",
+    txt:"clear"
+  },
+   {
+    id: "inDevBtn",
+    txt:"options"
+  },
+   {
+    id: "forPerBtn",
+    txt:"credits"
+  },
+   {
+    id: "bugRepoBtn",
+    txt:"Bugs"
+  }
+]
+
+buttonsMenu.forEach(e => {
+  const btn = document.createElement("button");
+  const text = document.createTextNode(e.txt)
+  btn.classList = "btn-Style"
+  btn.id = e.id
+  btn.append(text)
+  ObjP.headerItems.appendChild(btn)
+});
+
+
+
 
 ObjP.imgCont.innerHTML = `<img src="./pictures/per.webp" id="increment-btn" alt="beautifull picture of per smiling wearing a cap" />`;
 
-ObjP.buyMenu.innerHTML = `
-<div class="upgrade" id="buy1">
-  <p>HTML +1 click POW</p> 
-  <p>10$</p>
-</div>
-<div class="upgrade" id="buy2">
-  <p>CSS +2 click POW</p>  
-  <p>25$</p>
-</div>
-<div class="upgrade" id="buy3">
-  <p>javascript +3 click POW</p>  
-  <p>50$</p>
-</div>
-<div class="upgrade" id="buy4">
-  <p>Encouragement +4 click POW</p>  
-  <p>75$</p>
-</div>
-<div class="upgrade" id="buy5">
-  <p>"i hope it went well" +5 click POW</p> 
-  <p>100$</p>
-</div>
-<div class="upgrade" id="buy6">
-  <img src="./pictures/nick.webp" id="nick" alt="picture of a guy named nick short hair smiling" /> 
-  <p>best friend nick +6 click POW</p>  
-  <p>1000$</p>
-</div>
-`;
+const itemarr = ["HTML", "CSS", "JavaScript", "Encouragement", "i hope it went well", "best friend nick"]
+for(let i = 0; i < 6; i++) {
+  const div = document.createElement("div")
+  div.classList = "upgrade"
+  div.id = `buy${i + 1}`
+  const p1 = document.createElement("p");
+  const p1txt = document.createTextNode(`${itemarr[i]} +${i} click POW`)
+  p1.append(p1txt)
+  const p2 = document.createElement("p")
+  const p2txt = document.createTextNode(`${(i + 1) * 10}$`) 
+  p2.append(p2txt)
+  div.appendChild(p1)
+  div.appendChild(p2)
+  ObjP.buyMenu.appendChild(div)
+}
+
 
 localStorage.setItem("cash", user.money);
 
@@ -77,7 +91,7 @@ function buyUp(num) {
       
         }
   }
-  const cost = num * 10;
+  const cost = num  * 10;
   if (user.money >= cost) {
     user.upgraded += num;
     user.money -= cost;
