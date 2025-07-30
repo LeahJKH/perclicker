@@ -1,6 +1,10 @@
 body {
-  background: rgb(22,26,29);
-  background: linear-gradient(0deg, rgba(22,26,29,0.92) 83%, rgba(22,33,43,0.7) 100%);
+  background: rgb(22, 26, 29);
+  background: linear-gradient(
+    0deg,
+    rgba(22, 26, 29, 0.92) 83%,
+    rgba(22, 33, 43, 0.7) 100%
+  );
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -10,8 +14,12 @@ body {
 header {
   width: 100vw;
   min-height: 100px;
-  background: rgb(22,27,33);
-  background: linear-gradient(322deg, rgba(22,27,33,1) 0%, rgba(21,34,46,1) 100%);
+  background: rgb(22, 27, 33);
+  background: linear-gradient(
+    322deg,
+    rgba(22, 27, 33, 1) 0%,
+    rgba(21, 34, 46, 1) 100%
+  );
 }
 
 main {
@@ -24,12 +32,16 @@ main {
 
 /*MAIN GAME*/
 #cut-out {
-  background: rgb(34,42,55);
-  background: linear-gradient(0deg, rgba(34,42,55,1) 28%, rgba(110,123,146,1) 100%);
+  background: rgb(34, 42, 55);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 42, 55, 1) 28%,
+    rgba(110, 123, 146, 1) 100%
+  );
   width: 25%;
   height: 100px;
   text-align: center;
-  color: #6696CD;
+  color: #6696cd;
 }
 
 #increment-btn {
@@ -37,7 +49,7 @@ main {
   height: 200px;
   transition: all 0.2s;
   border-radius: 15px;
-  box-shadow: 2px 4px 20px #000 ;
+  box-shadow: 2px 4px 20px #000;
 }
 
 #increment-btn:active {
@@ -46,15 +58,22 @@ main {
 }
 
 #moneyBar {
-  background: rgb(110,123,146);
-  background: linear-gradient(180deg, rgba(110,123,146,1) 0%, rgba(80,91,110,1) 4%, rgba(60,70,86,1) 10%, rgba(55,65,80,1) 23%, rgba(34,42,55,1) 50%);
-  border: 3px solid #3E4858;
+  background: rgb(110, 123, 146);
+  background: linear-gradient(
+    180deg,
+    rgba(110, 123, 146, 1) 0%,
+    rgba(80, 91, 110, 1) 4%,
+    rgba(60, 70, 86, 1) 10%,
+    rgba(55, 65, 80, 1) 23%,
+    rgba(34, 42, 55, 1) 50%
+  );
+  border: 3px solid #3e4858;
   margin: 0 20px;
   padding: 5px;
   min-width: 385px;
   min-height: 69px;
   border-radius: 20px;
-  color: #6696CD;
+  color: #6696cd;
   font-size: 30px;
   align-items: center;
 }
@@ -73,10 +92,10 @@ main {
 }
 
 .btn-Style {
-  background-color: #2D3A52;
+  background-color: #2d3a52;
   border-radius: 10px;
   border: none;
-  color: #6696CD;
+  color: #6696cd;
   width: 180px;
   height: 53px;
   font-size: 30px;
@@ -85,16 +104,19 @@ main {
 
 /*UPGRADE BAR*/
 .upgrade {
-  background: rgb(32,40,52);
-  background: linear-gradient(0deg, rgba(32,40,52,1) 0%, rgba(32,35,42,0.4) 100%);
-  border: 1px solid #2D3A52;
+  background: rgb(32, 40, 52);
+  background: linear-gradient(
+    0deg,
+    rgba(32, 40, 52, 1) 0%,
+    rgba(32, 35, 42, 0.4) 100%
+  );
+  border: 1px solid #2d3a52;
   border-radius: 10px;
   text-align: left;
   padding: 5px;
   width: 85%;
   height: 50%;
-  color: #6696CD;
-
+  color: #6696cd;
 }
 
 #nick {
@@ -103,26 +125,28 @@ main {
 }
 
 #buy-menu-wrapper {
-
   height: 100%;
   width: 26%;
-  overflow: hidden; 
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: rgb(22,27,33);
-  background: linear-gradient(27deg, rgba(22,27,33,1) 0%, rgba(21,34,46,1) 100%);
+  background: rgb(22, 27, 33);
+  background: linear-gradient(
+    27deg,
+    rgba(22, 27, 33, 1) 0%,
+    rgba(21, 34, 46, 1) 100%
+  );
 }
 
 #buy-menu {
   padding: 20px 0 20px 0;
-  overflow-y: auto; 
+  overflow-y: auto;
   overflow-x: hidden;
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: center;
- 
 }
 /*UPGRADE BAR*/
 
@@ -135,25 +159,20 @@ main {
   justify-content: center;
   align-items: center;
 }
-#break-Line-style {
-  width: 70%;
-  height: 2px;
-  border-radius: 20px;
-  background-color: rgba(225, 225, 255, 0.5);
-  position: absolute;
-  z-index: 35;
-  top: 16.8%;
-  right: 20px;
-}
+
 #over-Menu {
   width: 80%;
   height: 80%;
-  background: rgb(32,40,52);
-  background: linear-gradient(0deg, rgba(32,40,52,1) 0%, rgba(32,35,42,1) 100%);
-  border: 6px solid #2D3A52;
+  background: rgb(32, 40, 52);
+  background: linear-gradient(
+    0deg,
+    rgba(32, 40, 52, 1) 0%,
+    rgba(32, 35, 42, 1) 100%
+  );
+  border: 6px solid #2d3a52;
   border-radius: 20px;
   padding: 20px;
-  color: #6696CD;
+  color: #6696cd;
 }
 
 #close {
@@ -182,23 +201,23 @@ main {
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: #9f9e9e #464646;
-  }
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #9f9e9e #464646;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 20px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 20px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #464646;
-  }
+*::-webkit-scrollbar-track {
+  background: #464646;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #9f9e9e;
-    border: 19px solid #ededed;
-  }
-  /* ===== Scrollbar CSS ===== */
+*::-webkit-scrollbar-thumb {
+  background-color: #9f9e9e;
+  border: 19px solid #ededed;
+}
+/* ===== Scrollbar CSS ===== */
