@@ -1,5 +1,5 @@
 import { ObjP } from "./module.js";
-import { optionCreater, AudioSwitch  } from "./menuMakers/options.js";
+import { optionCreater, AudioSwitch } from "./menuMakers/options.js";
 import { bugReport } from "./menuMakers/bugReport.js";
 import { credits } from "./menuMakers/credits.js";
 
@@ -20,52 +20,57 @@ if (!Number(localStorage.getItem("multiplier"))) {
 const buttonsMenu = [
   {
     id: "clearCacheBtn",
-    txt:"clear"
+    txt: "clear",
   },
-   {
+  {
     id: "inDevBtn",
-    txt:"options"
+    txt: "options",
   },
-   {
+  {
     id: "forPerBtn",
-    txt:"credits"
+    txt: "credits",
   },
-   {
+  {
     id: "bugRepoBtn",
-    txt:"Bugs"
-  }
-]
+    txt: "Bugs",
+  },
+];
 
-buttonsMenu.forEach(e => {
+buttonsMenu.forEach((e) => {
   const btn = document.createElement("button");
-  const text = document.createTextNode(e.txt)
-  btn.classList = "btn-Style"
-  btn.id = e.id
-  btn.append(text)
-  ObjP.headerItems.appendChild(btn)
+  const text = document.createTextNode(e.txt);
+  btn.classList = "btn-Style";
+  btn.id = e.id;
+  btn.append(text);
+  ObjP.headerItems.appendChild(btn);
 });
-
-
-
 
 ObjP.imgCont.innerHTML = `<img src="./pictures/per.webp" id="increment-btn" alt="beautifull picture of per smiling wearing a cap" />`;
 
-const itemarr = ["HTML", "CSS", "JavaScript", "Encouragement", "i hope it went well", "best friend nick"]
-for(let i = 0; i < 6; i++) {
-  const div = document.createElement("div")
-  div.classList = "upgrade"
-  div.id = `buy${i + 1}`
+const itemarr = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "Encouragement",
+  "i hope it went well",
+  "best friend nick",
+  "Certification",
+  "Scrimba",
+];
+for (let i = 0; i < itemarr.length; i++) {
+  const div = document.createElement("div");
+  div.classList = "upgrade";
+  div.id = `buy${i + 1}`;
   const p1 = document.createElement("p");
-  const p1txt = document.createTextNode(`${itemarr[i]} +${i} click POW`)
-  p1.append(p1txt)
-  const p2 = document.createElement("p")
-  const p2txt = document.createTextNode(`${(i + 1) * 10}$`) 
-  p2.append(p2txt)
-  div.appendChild(p1)
-  div.appendChild(p2)
-  ObjP.buyMenu.appendChild(div)
+  const p1txt = document.createTextNode(`${itemarr[i]} +${i + 1} click POW`);
+  p1.append(p1txt);
+  const p2 = document.createElement("p");
+  const p2txt = document.createTextNode(`${(i + 1) * 10}$`);
+  p2.append(p2txt);
+  div.appendChild(p1);
+  div.appendChild(p2);
+  ObjP.buyMenu.appendChild(div);
 }
-
 
 localStorage.setItem("cash", user.money);
 
@@ -88,10 +93,9 @@ function buyUp(num) {
     if (AudioSwitch === true) {
       ObjP.audio.play();
     } else {
-      
-        }
+    }
   }
-  const cost = num  * 10;
+  const cost = num * 10;
   if (user.money >= cost) {
     user.upgraded += num;
     user.money -= cost;
@@ -109,15 +113,13 @@ function clearCache() {
   location.reload();
 }
 
-
 function forPer() {
-  credits()
+  credits();
 }
 
 function bugrepo() {
-  bugReport()
+  bugReport();
 }
-
 
 function inDev() {
   optionCreater();
@@ -137,6 +139,8 @@ document.getElementById("buy3").addEventListener("click", () => buyUp(3));
 document.getElementById("buy4").addEventListener("click", () => buyUp(4));
 document.getElementById("buy5").addEventListener("click", () => buyUp(5));
 document.getElementById("buy6").addEventListener("click", () => buyUp(6));
+document.getElementById("buy7").addEventListener("click", () => buyUp(7));
+document.getElementById("buy8").addEventListener("click", () => buyUp(8));
 
 ObjP.closeMenu.addEventListener("click", () => {
   ObjP.transBg.style.display = "none";
